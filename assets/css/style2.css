@@ -1,0 +1,21 @@
+
+.ko-like-get-boxes {
+    display: flex !important;
+    cursor: auto;
+}
+
+.ko-like-get-boxes:hover .ko-like-title:before {
+    content: "برای لایک پست عضو سایت شوید";
+    position: absolute;
+    width: 175px;
+    font-size: 12px;
+    top: -24px;
+    right: -70px;
+    padding: 2px 5px;
+    color: #fff;
+    background: #da0b4e;
+    border-radius: 5px;
+}
+.ko-like-get-box {
+    position: relative;
+}

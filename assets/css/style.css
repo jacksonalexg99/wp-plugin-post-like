@@ -1,0 +1,49 @@
+#ko_like{
+    margin-right: -35px;
+}
+#ko_like button:hover {
+    color: red
+}
+#ko_like .heart {
+
+    top: -54px;
+    width: 100px;
+    height: 100px;
+    background-position: 0 0;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+}
+
+#ko_like .placement {
+    display: flex;
+}
+
+#ko_like p {
+    position: absolute;
+    right: 77px;
+    width: 50px;
+}
+
+#ko_like .heart.is-active {
+    transition-duration: 1.5s;
+    background-position: -2800px 0;
+}
+
+#ko_like .box_like {
+    display: flex;
+}
+
+#ko_like .box_like button {
+    outline: 0;
+    cursor: pointer;
+}
+#ko_like .box_like{
+    position: relative;
+
+}
+#ko_like .loading-like{
+    display: none;
+
+    margin-right: 32px;
+    width: 35px;
+}
