@@ -14,14 +14,19 @@ function set_like( $post_id, $user_id ) {
 				<img class="loading-like" src="<?php echo KO_LIKE_URL ?>assets/img/loading.svg" alt="loading" >
 				<button class="border-0 bg-transparent ko_btn_like" type="submit" name="add_like">
 					<?php
-					$meta_like_post = "_ko_like_post_" . $user_id;
-					if ( ! get_post_meta( $post_id, $meta_like_post, true ) ): ?>
+
+                    if ( ! get_post_meta( $post_id, "post_like", true ) ): ?>
 						<div class="placement">
 							<div class="heart"></div>
 						</div>
 					<?php else: ?>
+                       <?php  $user_like= get_post_meta( $post_id, "post_like", false ); ?>
 						<div class="placement">
-							<div class="heart is-active"></div>
+                        <?php if (array_search($user_id,$user_like)===false): ?>
+                            <div class="heart"></div>
+                            <?php else: ?>
+                            <div class="heart is-active"></div>
+                            <?php endif; ?>
 						</div>
 					<?php endif; ?>
 				</button>
